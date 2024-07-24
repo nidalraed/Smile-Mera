@@ -507,10 +507,10 @@ body.nav-active { overflow: hidden; }
 
 .hero {
   background-color: var(--midnight-green);
-  --section-padding: 200px;
+  --section-padding: 150px;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: var(--section-padding) 25px;
+  padding: var(--section-padding) 15px;
 }
 
 .hero-subtitle {
@@ -520,6 +520,7 @@ body.nav-active { overflow: hidden; }
   font-size: 1.3rem;
   text-align: right;
   margin-right: 80px;
+  top: 0;
 }
 
 .hero-subtitle::before {
@@ -658,8 +659,8 @@ body.nav-active { overflow: hidden; }
     /* استعلامات الوسائط لشاشات الجوال */
     @media (max-width: 600px) {
       .banner-section {
-        padding: 10px;
-        margin-top: 15px;
+        padding: 5px;
+        margin-top: 10px;
       }
 
       .banner-image {
@@ -823,7 +824,9 @@ body.nav-active { overflow: hidden; }
 \*-----------------------------------*/
 
 .doctor .section-title { margin-block-end: 50px; }
-
+.img-holder{
+  height: 30%;
+}
 .doctor-card .card-banner {
   border-radius: 4px;
   overflow: hidden;
