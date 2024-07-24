@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 
+    - primary meta tags
+  -->
+  <title>عيادة ابتسامة ميرا</title>
+  <meta name="title" content="معيادة ابتسامة ميرا">
+  <meta name="description" content="This is a madical html template made by codewithsadee">
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Rubik:wght@400;500;700&display=swap"
+    rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+
+
+    <link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper/swiper-bundle.min.css"
+/>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="./assets/images/hero-banner.png">
+  <link rel="preload" as="image" href="./assets/images/hero-bg.png">
+
+</head>
+
+<body id="top">
+
+  <!-- 
+    - #PRELOADER
+  -->
+
+  <div class="preloader" data-preloader>
+    <div class="circle"></div>
+  </div>
+
+
+
+
+
+<!-- 
+  - #HEADER
+-->
+
+<header class="header" data-header>
+  <div class="container">
+    <a href="#" class="btn has-before title-md">احجز موعدك</a>
+
+    <nav class="navbar" data-navbar>
+      <div class="navbar-top">
+ 
+        <a href="#" class="logo">
+          <img src="assets\images\logo.png" width="100" height="30" alt="Doclab home">
+        </a>
+    
+        <a href="#" class="btn has-before title-md">احجز موعدك</a>
+      </div>
+    
+      <ul class="navbar-list">
+        <li class="navbar-item">
+          <a href="#" class="navbar-link title-md">اتصل بنا</a>
+        </li>         
+        <li class="navbar-item">
+          <a href="#" class="navbar-link title-md">المدونة</a>
+        </li>
+        <li class="navbar-item">
+          <a href="#" class="navbar-link title-md">الأطباء</a>
+        </li>
+         <li class="navbar-item">
+          <a href="#" class="navbar-link title-md">الخدمات</a>
+        </li>
+        <li class="navbar-item">
+          <a href="#" class="navbar-link title-md">الرئيسية</a>
+        </li>
+      </ul>
+    
+    </nav>
+    
+
+    <div class="overlay" data-nav-toggler data-overlay></div>
+    <a href="#" class="logo">
+      <img src="assets\images\logo.png" width="130" height="35" alt="Doclab home">
+    </a>
+  </div>
+</header>
+
+
+
+
+
+
+  <main>
+    <article>
+
+     <!-- 
+        - #HERO
+      -->
+      <section class="section hero" style="background-image: url('./assets/images/hero-bg.png')" aria-label="home">
+        <div class="container">
+          <figure class="hero-banner" data-reveal="right">
+            <img src="./assets/images/hero-banner.png" width="590" height="517" loading="eager" alt="hero banner" class="w-100">
+          </figure>
+          <div class="hero-content">
+            <p class="hero-subtitle has-before" data-reveal="right">مرحبا بكم في عيادة ابتسامة ميرا</p>
+            <h1 class="headline-md hero-title" data-reveal="right">قم بحجز كشف واستشارة مجانية الان</h1>
+            <div class="hero-card" data-reveal="left">
+              <form class="hero-form" id="booking-form" method="POST" action="https://script.google.com/macros/s/AKfycbyxo5gMdGvH1FLA5bybm85HQUBWDMYREfMPyRZwPNdHYzRHLKZTy33fdDCZBKULA6lNow/exec">
+                <div class="form-group">
+                  <div class="input-wrapper">
+                    <label for="full-name" class="input-label">الاسم الكامل</label>
+                    <input type="text" id="full-name" name="fullName" class="input-field" required>
+                  </div>
+                  <div class="input-wrapper">
+                    <label for="phone" class="input-label">رقم الهاتف</label>
+                    <input type="tel" id="phone" name="phone" class="input-field" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="input-wrapper">
+                    <label for="address" class="input-label">العنوان</label>
+                    <input type="text" id="address" name="address" class="input-field">
+                  </div>
+                  <div class="input-wrapper">
+                    <label for="email" class="input-label">البريد الإلكتروني</label>
+                    <input type="email" id="email" name="email" class="input-field">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="input-wrapper">
+                    <label for="payment-plan" class="input-label">نوع التقسيط</label>
+                    <select id="payment-plan" name="paymentPlan" class="input-field">
+                      <option value="" disabled selected>اختر نوع التقسيط</option>
+                      <option value="tamara">تمارا</option>
+                      <option value="tabby">تابي</option>
+                      <option value="eijar">إيجاره (فقط للسعوديين بدون دفعة أولى)</option>
+                      <option value="cash">سوف أقوم بدفع كاش</option>
+                    </select>
+                  </div>
+                  <div class="input-wrapper">
+                    <label for="service" class="input-label">نوع الخدمة</label>
+                    <select id="service" name="service" class="input-field">
+                      <option value="" disabled selected>اختر نوع الخدمة</option>
+                      <option value="زراعة اسنان">زراعة أسنان</option>
+                      <option value="ابتسامة هوليود">ابتسامة هوليوود</option>
+                      <option value="تنظيف أسنان ">تنظيف أسنان</option>
+                      <option value="تنبيض اسنان">تبيض أسنان</option>
+                      <option value="معالجات">معالجات</option>
+                    </select>
+                  </div>
+                </div>
+                <button type="submit" class="btn">
+                  <ion-icon name="send"></ion-icon>
+                  <span class="span">احجز موعد الآن</span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- البانر الجديد -->
+        <div class="banner-section">
+          <img src="assets/images/banner.jpeg" alt="Banner Image" class="banner-image">
+        </div>
+      </section>
+    
+    
+      <!-- البانر الجديد -->
+
+
+      <script>
+        document.getElementById("booking-form").addEventListener("submit", function(event) {
+          event.preventDefault();
+          const form = event.target;
+          const submitButton = form.querySelector("button[type='submit']");
+          submitButton.disabled = true;
+          submitButton.querySelector("span").innerText = "يرجى الانتظار، جارٍ حجز الموعد";
+      
+          const formData = new FormData(form);
+          fetch(form.action, {
+            method: "POST",
+            body: new URLSearchParams(formData)
+          })
+          .then(response => response.text())
+          .then(result => {
+            Swal.fire({
+              title: 'تم بنجاح!',
+              text: 'شكراً لك، تم حجز الموعد بنجاح',
+              icon: 'success',
+              confirmButtonText: 'موافق'
+            });
+            form.reset();
+          })
+          .catch(error => {
+            Swal.fire({
+              title: 'حدث خطأ!',
+              text: 'فشل في حجز الموعد: ' + error.message,
+              icon: 'error',
+              confirmButtonText: 'موافق'
+            });
+          })
+          .finally(() => {
+            submitButton.disabled = false;
+            submitButton.querySelector("span").innerText = "احجز موعد الآن";
+          });
+        });
+      </script>
+      
+            
+      
+
+<!--
+  - #SERVICE
+-->
+
+<section class="service" aria-label="service">
+  <div class="container">
+    <h2 class="section-title">خدماتنا</h2>
+    <span class="bg-watermark">خدماتنا</span>
+    <ul class="service-list">
+      <li>
+        <div class="service-card" data-reveal="bottom">
+          <div class="card-icon">
+            <img src="assets\images\dental-braces.png" width="71" height="71" loading="lazy" alt="زراعة أسنان">
+          </div>
+          <h3 class="headline-sm card-title">
+            <a href="#">زراعة أسنان</a>
+          </h3>
+          <p class="card-text">
+            اكتسب ثقتك الكاملة مع زراعة الأسنان التي توفر لك حلًا دائمًا وفعالًا للأسنان المفقودة. نحن نستخدم أحدث التقنيات لضمان نتائج مبهرة وجذابة، مما يتيح لك الاستمتاع بابتسامة طبيعية وصحية.
+          </p>
+          <button class="btn-circle" aria-label="قراءة المزيد عن زراعة الأسنان">
+            <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+      </li>
+
+      <li>
+        <div class="service-card" data-reveal="bottom">
+          <div class="card-icon">
+            <img src="assets\images\smiling-mouth.png" width="71" height="71" loading="lazy" alt="ابتسامة هوليود">
+          </div>
+          <h3 class="headline-sm card-title">
+            <a href="#">ابتسامة هوليود</a>
+          </h3>
+          <p class="card-text">
+            حقق ابتسامة الأحلام مع خدمات ابتسامة هوليوود التي نقدمها. من خلال استخدام تقنيات متقدمة وتجميل الأسنان بأعلى مستويات الاحترافية، نقدم لك ابتسامة مشرقة ومتألقة تجعل كل لحظة أكثر جمالاً.
+
+          </p>
+          <button class="btn-circle" aria-label="قراءة المزيد عن ابتسامة هوليود">
+            <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+      </li>
+
+      <li>
+        <div class="service-card" data-reveal="bottom">
+          <div class="card-icon">
+            <img src="assets\images\electric-toothbrush.png" width="71" height="71" loading="lazy" alt="تنظيف أسنان">
+          </div>
+          <h3 class="headline-sm card-title">
+            <a href="#">تنظيف أسنان</a>
+          </h3>
+          <p class="card-text">
+            استعد لابتسامة براقة مع خدمات تبييض الأسنان لدينا. باستخدام تقنيات متطورة وآمنة، نمنحك ابتسامة ناصعة ومشرقة تعزز من ثقتك بنفسك وتترك انطباعاً دائماً.
+          </p>
+          <button class="btn-circle" aria-label="قراءة المزيد عن تنظيف الأسنان">
+            <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+      </li>
+
+      <li>
+        <div class="service-card" data-reveal="bottom">
+          <div class="card-icon">
+            <img src="assets\images\tooth.png" width="71" height="71" loading="lazy" alt="تبييض أسنان">
+          </div>
+          <h3 class="headline-sm card-title">
+            <a href="#">تبييض أسنان</a>
+          </h3>
+          <p class="card-text">
+            احرص على صحة فمك مع جلسات تنظيف الأسنان المهنية لدينا. تخلص من الرواسب والجير بطرق آمنة وفعالة، واحصل على أسنان أكثر بياضاً ونظافة، ما يعزز صحة لثتك ويمنع الأمراض الفموية.
+          </p>
+          <button class="btn-circle" aria-label="قراءة المزيد عن تبييض الأسنان">
+            <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+      </li>
+
+
+
+    </ul>
+  </div>
+</section>
+
+
+
+
+
+<!-- 
+  - #ABOUT
+-->
+
+<section class="section about" aria-labelledby="about-label">
+  <div class="container">
+
+    <div class="about-content">
+
+      <p class="section-subtitle title-lg has-after" id="about-label" data-reveal="left">معلومات عنا</p>
+
+      <h2 class="headline-md" data-reveal="left">أطباء ذوو خبرة</h2>
+
+      <p class="section-text" data-reveal="left">
+        مجمع ابتسامة ميرا، الرائد في طب وتجميل الأسنان بالرياض، منذ أكثر من 20 سنة. نقدم خدمات طبية وتجميلية بأعلى معايير الجودة، بفريق طبي متخصص وخبير، نستخدم أحدث التقنيات مثل الليزر والتصوير الشعاعي والتقويم الشفاف وغيرها.
+      </p>
+
+      <ul class="tab-list" data-reveal="left">
+        <li>
+          <button class="tab-btn active" onclick="showTabContent('vision')">الرؤية</button>
+        </li>
+        <li>
+          <button class="tab-btn" onclick="showTabContent('mission')">الرسالة</button>
+        </li>
+        <li>
+          <button class="tab-btn" onclick="showTabContent('strategy')">الاستراتيجية</button>
+        </li>
+      </ul>
+
+      <div id="vision" class="tab-content" data-reveal="left">
+        <p class="tab-text">أن نكون الخيار الأول في تقديم خدمات طب وتجميل الأسنان بتميز وابتكار، مع التزامنا بتحقيق الابتسامة المثالية لكل مراجع.</p>
+      </div>
+      <div id="mission" class="tab-content" data-reveal="left" style="display:none;">
+        <p class="tab-text">تقديم رعاية صحية شاملة ومتميزة في طب وتجميل الأسنان، تعتمد على أحدث التقنيات وأفضل الممارسات الطبية، لضمان رضا وراحة مرضانا.</p>
+      </div>
+      <div id="strategy" class="tab-content" data-reveal="left" style="display:none;">
+        <p class="tab-text">نركز على التميز الطبي من خلال توظيف أفضل الأطباء والمتخصصين وتقديم برامج تدريب مستمرة لهم. نستثمر في أحدث الأجهزة والتقنيات لضمان دقة التشخيص والعلاج. نسعى لتقديم خدمات شخصية تركز على راحة واحتياجات المرضى. نهتم بتعزيز الوعي بصحة الفم والأسنان من خلال تنظيم ورش عمل توعوية. نلتزم بأعلى معايير الجودة والسلامة لتحقيق أفضل النتائج الممكنة.</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+    <!-- <figure class="about-banner" data-reveal="right">
+      <img src="./assets/images/about-banner.png" width="554" height="678" loading="lazy" alt="عننا"
+        class="w-100">
+    </figure> -->
+
+
+<!-- 
+  - #Testimonials
+-->
+
+<section class="section__container">
+  <h2>الشهادات</h2>
+  <h1>ماذا يقول عملائنا</h1>
+  <div class="swiper-container"><br>
+    <div class="swiper-wrapper">
+      <div class="swiper-slide section__card" onclick="window.location.href='https://www.google.com/search?q=%D9%85%D8%AC%D9%85%D8%B9+%D8%A7%D8%A8%D8%AA%D8%B3%D8%A7%D9%85%D8%A9+%D9%85%D9%8A%D8%B1%D8%A7&sca_esv=584cd96bcb8b380e&rlz=1C1GCEU_enJO1071JO1071&prmd=mivn&sxsrf=ADLYWILP08F9zuErExzLVN4PXH-Ut30-zA:1721776187605&si=ACC90nwjPmqJHrCEt6ewASzksVFQDX8zco_7MgBaIawvaF4-7toeY1LdMthqZASAaWi9yL72GyJgWw1_SvweQrJEDox29qjf-Q83dwXvV-BxZDmc_DS-mX4%3D&sa=X&ved=2ahUKEwiE262QpL6HAxWIRfEDHT1zCJQQ9qsLegQIIRAG&biw=393&bih=736&dpr=2.75'">
+        <span><i class="ri-double-quotes-l"></i></span>
+        <h4>خدمة ممتازة ورعاية رائعة</h4>
+        <p class="testimonial-text">
+          تجربتي في إبتسامة ميرا كانت رائعة بكل المقاييس! الفريق الطبي محترف للغاية ويهتم بأدق التفاصيل لضمان راحة المريض ولاسيما الانسه فرح الله يعطيها العافيه ،.أود أن أعبر عن امتناني الخاص للدكتور يزيد الراجح، فقد كان شخص فاهم في ايصال احتياجك ومحترف بشكل استثنائي.
+        </p>
+        <button class="show-more-btn">شاهد المزيد</button>
+
+        <img src="assets/images/user-1.jpg" alt="user" />
+        <div class="section__card-rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+        </div>
+        <h5>عبد الرحمن</h5>
+      </div>
+      <div class="swiper-slide section__card" onclick="window.location.href='https://www.google.com/search?q=%D9%85%D8%AC%D9%85%D8%B9+%D8%A7%D8%A8%D8%AA%D8%B3%D8%A7%D9%85%D8%A9+%D9%85%D9%8A%D8%B1%D8%A7&sca_esv=584cd96bcb8b380e&rlz=1C1GCEU_enJO1071JO1071&prmd=mivn&sxsrf=ADLYWILP08F9zuErExzLVN4PXH-Ut30-zA:1721776187605&si=ACC90nwjPmqJHrCEt6ewASzksVFQDX8zco_7MgBaIawvaF4-7toeY1LdMthqZASAaWi9yL72GyJgWw1_SvweQrJEDox29qjf-Q83dwXvV-BxZDmc_DS-mX4%3D&sa=X&ved=2ahUKEwiE262QpL6HAxWIRfEDHT1zCJQQ9qsLegQIIRAG&biw=393&bih=736&dpr=2.75'">
+        <span><i class="ri-double-quotes-l"></i></span>
+        <h4>ابتسامة رائعة بفضلهم</h4>
+        <p class="testimonial-text">
+          شكر خاص للدكتور يزيد الخراز >>> ماشاءالله تبارك الله . أنصح فيه بشدة - موفق جداً في عمله ويعمل بضمير وياخد الوقت الكافي مع المريض بصراحة ممتاز ممتاز ممتاز وبارك الله فيه وبيض الله وجه
+        </p>
+        <button class="show-more-btn">شاهد المزيد</button>
+
+        <img src="assets/images/user-2.jpg" alt="user" />
+        <div class="section__card-rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+        </div>
+        <h5>ليلى الكيلاني</h5>
+      </div>
+      <div class="swiper-slide section__card" onclick="window.location.href='https://www.google.com/search?q=%D9%85%D8%AC%D9%85%D8%B9+%D8%A7%D8%A8%D8%AA%D8%B3%D8%A7%D9%85%D8%A9+%D9%85%D9%8A%D8%B1%D8%A7&sca_esv=584cd96bcb8b380e&rlz=1C1GCEU_enJO1071JO1071&prmd=mivn&sxsrf=ADLYWILP08F9zuErExzLVN4PXH-Ut30-zA:1721776187605&si=ACC90nwjPmqJHrCEt6ewASzksVFQDX8zco_7MgBaIawvaF4-7toeY1LdMthqZASAaWi9yL72GyJgWw1_SvweQrJEDox29qjf-Q83dwXvV-BxZDmc_DS-mX4%3D&sa=X&ved=2ahUKEwiE262QpL6HAxWIRfEDHT1zCJQQ9qsLegQIIRAG&biw=393&bih=736&dpr=2.75'">
+        <span><i class="ri-double-quotes-l"></i></span>
+        <h4>تجربة تنظيف أسنان مريحة</h4>
+        <p class="testimonial-text">
+          السلام عليكم ورحمة الله وبركاته
+
+          حرفيا افضل عياده دخلتها للاسنان ونعمه التعامل و الاسلوب
+          ويكفي مقابله الدكتور : جهاد على أسلوبه الرائع و الراقي و شغله روعه جد جد انصح الكل يجي والاداره ما تقصر مع احد ابداً
+          . اشكرا كمان المنسقه نزيهه على حسن التعامل و الاسلوب الرائع
+          .واشكر خلود على اسلوبها الراقي و طريقه كلمها الحلو
+          
+          شكراً جزيلا على مركز ابتسامة ميرا لطب الأسنان 😍🌹🌹🌹
+        </p>
+        <button class="show-more-btn">شاهد المزيد</button>
+
+        <img src="assets/images/user-3.jpg" alt="user" />
+        <div class="section__card-rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+        </div>
+        <h5>محمود الزعبي</h5>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const showMoreButtons = document.querySelectorAll('.show-more-btn');
+
+  showMoreButtons.forEach(button => {
+    const testimonial = button.previousElementSibling;
+    const originalText = testimonial.textContent.trim();
+    const words = originalText.split(' ');
+
+    if (words.length > 42) {
+      const truncatedText = words.slice(0,42).join(' ') + '...';
+      testimonial.textContent = truncatedText;
+
+      button.style.display = 'block';
+
+      button.addEventListener('click', function() {
+        if (testimonial.textContent === truncatedText) {
+          testimonial.textContent = originalText;
+          button.textContent = 'عرض أقل';
+        } else {
+          testimonial.textContent = truncatedText;
+          button.textContent = 'شاهد المزيد';
+        }
+      });
+    } else {
+      button.style.display = 'none';
+    }
+  });
+});
+</script>
+
+
+  
+
+
+
+
+
+
+
+
+    </article>
+  </main>
+
+
+
+
+
+<!-- 
+  - #FOOTER
+-->
+
+<footer class="footer" style="background-image: url('./assets/images/footer-bg.png')">
+  <div class="container">
+
+    <div class="section footer-top">
+
+      <div class="footer-brand footer-bottom" data-reveal="bottom">
+
+        <a href="#" class="logo">
+          <img src="assets/images/logo.png" width="136" height="46" loading="lazy" alt="Doclab home">
+        </a>
+
+        <ul class="contact-list has-after">
+
+          <li class="contact-item">
+
+            <div class="item-icon">
+              <ion-icon name="mail-open-outline"></ion-icon>
+            </div>
+
+            <div>
+              <p>
+                البريد الإلكتروني الرئيسي: <a href="mailto:info@mira-smile.sa" class="contact-link">  info@mira-smile.sa</a>
+              </p>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="item-icon">
+              <ion-icon name="call-outline"></ion-icon>
+            </div>
+
+            <div>
+              <p>
+                هاتف المكتب: <a href="tel:+966-530584473" class="contact-link">530584473  - 966+ </a>
+              </p>
+
+              <p>
+                الجوال: <a href="tel:+966-553147313" class="contact-link">  553147313 - 966+ </a>
+              </p>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <ul class="social-list">
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+  
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+  
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-google"></ion-icon>
+            </a>
+          </li>
+  
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+  
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-pinterest"></ion-icon>
+            </a>
+          </li>
+  
+        </ul>
+
+      </div>
+
+      <div class="footer-list" data-reveal="bottom">
+
+        <p class="headline-sm footer-list-title">عنا</p>
+
+        <p class="text">
+          نقدم خدمات متميزة في مجال الرعاية الصحية. تواصل معنا للحصول على المزيد من المعلومات.
+        </p>
+
+        <address class="address">
+          <ion-icon name="map-outline"></ion-icon>
+
+          <span class="text">
+            الرياض حي العليا شارع الامير سلطان بن عبد العزيز<br>
+          </span>
+        </address>
+
+      </div>
+
+      <ul class="footer-list" data-reveal="bottom">
+
+        <li>
+          <p class="headline-sm footer-list-title">الخدمات</p>
+        </li>
+
+        <li>
+          <a href="#" class="text footer-link">القائمة</a>
+        </li>
+
+
+
+        <li>
+          <a href="#" class="text footer-link">اتصل بنا</a>
+        </li>
+
+      </ul>
+
+      <ul class="footer-list" data-reveal="bottom">
+
+        <li>
+          <p class="headline-sm footer-list-title">روابط مفيدة</p>
+        </li>
+
+        <li>
+          <a href="#" class="text footer-link">شروط الاستخدام</a>
+        </li>
+
+        <li>
+          <a href="#" class="text footer-link">خدماتنا</a>
+        </li>
+
+
+
+        <li>
+          <a href="#" class="text footer-link">قائمة الفريق</a>
+        </li>
+
+      </ul>
+
+      <!-- Replace subscription section with map -->
+      <div class="footer-map" data-reveal="bottom">
+        <p class="headline-sm footer-list-title">موقعنا على الخريطة</p>
+
+        <div class="map-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3624.9736156905287!2d46.6993343!3d24.6934337!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f03a201634f03%3A0x9d9bd58fdff0c3cd!2z2YXYrNmF2Lkg2KfYqNiq2LPYp9mF2Kkg2YXZitix2Kcg2YTYt9ioINin2YTYo9iz2YbYp9mG!5e0!3m2!1sar!2sjo!4v1721678831229!5m2!1sar!2sjo" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        
+        <p class="text">
+          يمكنك العثور علينا على الخريطة أعلاه.
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+      <p class="text copyright">
+        &copy; Smile Mera  2024 | تم التصميم والبرمجة بواسطة<a href="https://www.instagram.com/nid.code/" target="_blank">NidCode</a>
+      </p>
+    </div>
+
+  </div>
+</footer>
+
+<!--
+زر الواتساب
+-->
+
+<script async src='https://d2mpatx37cqexb.cloudfront.net/delightchat-whatsapp-widget/embeds/embed.min.js'></script>
+<script>
+  var wa_btnSetting = {
+    "btnColor": "#16BE45",
+    "ctaText": "تواصل معنا لاي استفسار",
+    "cornerRadius": 40,
+    "marginBottom": 23,
+    "marginLeft": 20,
+    "marginRight": "30",
+    "btnPosition": "left",  // تغيير موقع الزر إلى اليسار
+    "whatsAppNumber": "962780785034",
+    "welcomeMessage": "Hello",
+    "zIndex": 999999,
+    "btnColorScheme": "light"
+  };
+
+  var wa_widgetSetting = {
+    "title": "عيادة ابتسامة ميرا",
+    "subTitle": "online",
+    "headerBackgroundColor": "#005761",
+    "headerColorScheme": "light",
+    "greetingText": " اهلا وسهلا يرجى التواصل معنا على الواتساب او الاتصال على  \n+962 780785034",
+    "ctaText": "تواصل معنا على الواتساب",
+    "btnColor": "#06b242",
+    "cornerRadius": 40,
+    "welcomeMessage": "Hello",
+    "btnColorScheme": "light",
+    "brandImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiQMAUriDJKgp0MQAIY69PwOZFLw-unTV3-Q&s",
+    "darkHeaderColorScheme": {
+      "title": "#333333",
+      "subTitle": "#4F4F4F"
+    }
+  };
+
+  window.onload = () => {
+    _waEmbed(wa_btnSetting, wa_widgetSetting);
+  };
+</script>
+
+<button class="call-button" onclick="window.location.href='tel:+962780785034'">
+    اتصل بنا  &nbsp; <i class="fa fa-phone"></i> 
+</button>
+
+<!-- تأكد من تضمين Font Awesome لأيقونة الهاتف -->
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+      
+
+
+  <!-- 
+    - #BACK TO TOP
+  -->
+
+  <!-- <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="chevron-up"></ion-icon>
+  </a> -->
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+  <!-- 
+    - ionicon link
+  -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+
+</html>
