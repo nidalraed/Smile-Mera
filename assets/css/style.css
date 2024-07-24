@@ -89,7 +89,11 @@
 
 }
 
-
+* {
+  font-family: "Tajawal", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
 
 
@@ -481,7 +485,7 @@ body.nav-active { overflow: hidden; }
 .call-button {
   position: fixed;
   bottom: 20px;
-  right: 20px;
+  right: 10px;
   background-color: #861F5E;
   color: white;
   border: none;
@@ -687,6 +691,8 @@ body.nav-active { overflow: hidden; }
   margin-block-start: -60px;
   background-color: var(--white);
   box-shadow: var(--shadow-1);
+  text-align: center;
+
 }
 
 .service-card { text-align: center; }
@@ -744,6 +750,7 @@ body.nav-active { overflow: hidden; }
 .about {
   padding-block-end: 0;
   direction: rtl; /* لتغيير اتجاه النص إلى اليمين */
+  text-align: center;
 }
 
 .about .container {
@@ -808,6 +815,92 @@ body.nav-active { overflow: hidden; }
     margin-bottom: 10px; /* إضافة مسافة بين التبويبات عند وضعها في عمود */
   }
 }
+
+
+
+/*-----------------------------------*\
+  #DOCTOR
+\*-----------------------------------*/
+
+.doctor .section-title { margin-block-end: 50px; }
+
+.doctor-card .card-banner {
+  border-radius: 4px;
+  overflow: hidden;
+  margin-block-end: 25px;
+}
+
+.doctor-card {
+  padding: 30px;
+  border: 1px solid hsl(0, 0%, 84%);
+  border-radius: 4px;
+  text-align: center;
+  min-height: 100%;
+}
+
+.doctor-card .card-title {
+  font-size: 2.4rem;
+  transition: 0.25s ease;
+}
+
+.doctor-card:is(:hover, :focus-within) .card-title { color: #2889b3; }
+
+.doctor-card .card-subtitle {
+  color: #2889b3;
+  margin-block: 10px 15px;
+}
+
+.doctor-card .card-social-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.doctor-card .card-social-link {
+  background-color: hsl(225, 67%, 91%);
+  color: #2889b3;
+  font-size: 16px;
+  padding: 12px;
+  border-radius: 50%;
+  transition: 0.25s ease;
+}
+
+.doctor-card .card-social-link:is(:hover, :focus) {
+  background-color: #2889b3;
+  color:hsl(0, 0%, 100%);
+}
+
+.has-scrollbar {
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  margin-inline: 15px;
+  padding-block-end: 40px;
+  margin-block-end: -20px;
+  scroll-snap-type: inline mandatory;
+}
+
+.scrollbar-item {
+  min-width: 100%;
+  scroll-snap-align: start;
+}
+
+.has-scrollbar::-webkit-scrollbar { height: 10px; }
+
+.has-scrollbar::-webkit-scrollbar-track {
+  background-color:hsl(0, 0%, 84%);
+  border-radius: 4px;
+}
+
+.has-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #2889b3;
+  border-radius: 4px;
+}
+
+.has-scrollbar::-webkit-scrollbar-button { width: calc(25% - 30px); }
+
+
 
 
 
@@ -1110,7 +1203,7 @@ body.nav-active { overflow: hidden; }
 }
 
 .footer-bottom {
-  padding-block: 32px;
+  padding-block: 60px;
   border-block-start: 1px solid var(--white_a20);
   text-align: right; /* محاذاة النصوص إلى اليمين */
 }
