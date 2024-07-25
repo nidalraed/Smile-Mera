@@ -778,7 +778,7 @@ body.nav-active { overflow: hidden; }
   padding: 7px 21px;
   border-radius: var(--radius-6);
   font-weight: var(--fw-700);
-  margin-right: 13px;;
+  margin-right: 10px;;
 }
 
 .tab-btn.active {
