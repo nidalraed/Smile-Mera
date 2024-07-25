@@ -775,11 +775,9 @@ body.nav-active { overflow: hidden; }
 .tab-btn {
   background-color: var(--alice-blue);
   color: var(--midnight-green);
-  padding: 7px 15px;
+  padding: 7px 19px;
   border-radius: var(--radius-6);
-  font-weight: var(--fw-700);
-  margin-right: 10px;;
-}
+  font-weight: var(--fw-700);}
 
 .tab-btn.active {
   background-color: var(--verdigris);
@@ -818,9 +816,6 @@ body.nav-active { overflow: hidden; }
 
   .tab-btn {
     margin-bottom: 10px; /* إضافة مسافة بين التبويبات عند وضعها في عمود */
-    margin-right: 7px;
-    padding: 7px 17px;
-
 
   }
 }
