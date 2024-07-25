@@ -775,7 +775,7 @@ body.nav-active { overflow: hidden; }
 .tab-btn {
   background-color: var(--alice-blue);
   color: var(--midnight-green);
-  padding: 7px 21px;
+  padding: 7px 15px;
   border-radius: var(--radius-6);
   font-weight: var(--fw-700);
   margin-right: 10px;;
