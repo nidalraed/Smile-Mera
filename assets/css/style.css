@@ -672,6 +672,66 @@ body.nav-active { overflow: hidden; }
 
 
     }
+/* تحسينات للبنر */
+.banner-section1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  padding: 10px;
+  background-color: #f0f8ff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex-direction: column;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* تحسينات لجذب الانتباه على الموبايل */
+.banner-section1:hover {
+  transform: scale(1.03); /* تكبير بسيط عند المرور بالماوس */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.banner-image {
+  max-width: 100%;
+  height: auto; /* الحفاظ على نسب الصورة */
+  border-radius: 10px;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+/* تحسينات لجعل الصورة أكثر وضوحًا على الموبايل */
+@media (max-width: 600px) {
+  .banner-section {
+    padding: 5px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .banner-image {
+    max-height: 200px; /* تكبير الصورة على الموبايل */
+    object-fit: cover; /* التأكد من تغطية الصورة بالكامل */
+  }
+}
+
+/* تحسينات للشاشات الأكبر */
+@media (min-width: 600px) {
+  .banner-image {
+    max-width: 80%; /* تحسين العرض بالنسبة للشاشات الكبيرة */
+  }
+}
+
+@media (min-width: 1024px) {
+  .banner-section {
+    padding: 15px;
+    margin-top: 60px;
+  }
+
+  .banner-image {
+    max-width: 70%; /* تعديل العرض للصورة على الشاشات الكبيرة */
+  }
+}
 
  
 
