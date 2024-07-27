@@ -181,3 +181,73 @@ document.getElementById('booking-form').addEventListener('submit', function(even
 
 
 
+document.getElementById("booking-form").addEventListener("submit", function(event) {
+  event.preventDefault();
+  const form = event.target;
+  const submitButton = form.querySelector("button[type='submit']");
+  submitButton.disabled = true;
+  submitButton.querySelector("span").innerText = "يرجى الانتظار، جارٍ حجز الموعد";
+
+  const formData = new FormData(form);
+  fetch(form.action, {
+    method: "POST",
+    body: new URLSearchParams(formData)
+  })
+  .then(response => response.text())
+  .then(result => {
+    Swal.fire({
+      title: 'تم بنجاح!',
+      text: 'شكراً لك، تم حجز الموعد بنجاح',
+      icon: 'success',
+      confirmButtonText: 'موافق'
+    });
+    form.reset();
+  })
+  .catch(error => {
+    Swal.fire({
+      title: 'حدث خطأ!',
+      text: 'فشل في حجز الموعد: ' + error.message,
+      icon: 'error',
+      confirmButtonText: 'موافق'
+    });
+  })
+  .finally(() => {
+    submitButton.disabled = false;
+    submitButton.querySelector("span").innerText = "احجز موعد الآن";
+  });
+});
+
+document.getElementById('booking-form').addEventListener('submit', function() {
+fbq('track', 'Lead');
+});
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const showMoreButtons = document.querySelectorAll('.show-more-btn');
+
+  showMoreButtons.forEach(button => {
+    const testimonial = button.previousElementSibling;
+    const originalText = testimonial.textContent.trim();
+    const words = originalText.split(' ');
+
+    if (words.length > 42) {
+      const truncatedText = words.slice(0,42).join(' ') + '...';
+      testimonial.textContent = truncatedText;
+
+      button.style.display = 'block';
+
+      button.addEventListener('click', function() {
+        if (testimonial.textContent === truncatedText) {
+          testimonial.textContent = originalText;
+          button.textContent = 'عرض أقل';
+        } else {
+          testimonial.textContent = truncatedText;
+          button.textContent = 'شاهد المزيد';
+        }
+      });
+    } else {
+      button.style.display = 'none';
+    }
+  });
+});

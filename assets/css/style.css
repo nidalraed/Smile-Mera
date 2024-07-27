@@ -1429,7 +1429,7 @@ margin-right:60px;}
   #BACK TO TOP
 \*-----------------------------------*/
 
-.back-top-btn {
+/* .back-top-btn {
   position: fixed;
   bottom: 30px;
   right: 30px;
@@ -1448,7 +1448,7 @@ margin-right:60px;}
 .back-top-btn.active {
   transform: translateY(-10px);
   opacity: 1;
-}
+} */
 
 
 
@@ -1637,11 +1637,6 @@ margin-right:60px;}
 
 
 
-  /**
-   * BLOG
-   */
-
-  .blog .grid-list { grid-template-columns: 1fr 1fr; }
 
 }
 
@@ -1710,19 +1705,10 @@ margin-right:60px;}
 
 
 
-  /**
-   * LISTING
-   */
-
-  .listing .grid-list { grid-template-columns: repeat(4, 1fr); }
 
 
 
-  /**
-   * BLOG
-   */
 
-  .blog .grid-list { grid-template-columns: repeat(3, 1fr); }
 
 
 
@@ -1762,3 +1748,6 @@ margin-right:60px;}
   background-color: var(--verdigris);
   color: #fff;
 }
+
+
+/* --made by Nidal raed */

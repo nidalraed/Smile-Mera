@@ -19,12 +19,12 @@
   -->
   <title>عيادة ابتسامة ميرا</title>
   <meta name="title" content="عيادة ابتسامة ميرا لطب وجراحة الاسنان">
-  <meta name="description" content="This is a madical html template made by codewithsadee">
+  <meta name="description" content="This is a madical html template made by nedalraed">
 
   <!-- 
     - favicon
   -->
-  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="shortcut icon" href="assets\images\logo.png" type="image/svg+xml">
 
   <!-- 
     - google font link
@@ -33,7 +33,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Rubik:wght@400;500;700&display=swap"
     rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
     <link
@@ -95,7 +95,7 @@
       <div class="navbar-top">
  
         <a href="#" class="logo">
-          <img src="assets\images\logo.png" width="100" height="30" alt="Doclab home">
+          <img src="assets\images\logo.png">
         </a>
     
         <a href="#" class="btn has-before title-md">احجز موعدك</a>
@@ -128,11 +128,6 @@
     </a>
   </div>
 </header>
-
-
-
-
-
 
   <main>
     <article>
@@ -215,51 +210,6 @@
     
     
       <!-- البانر الجديد -->
-
-
-      <script>
-        document.getElementById("booking-form").addEventListener("submit", function(event) {
-          event.preventDefault();
-          const form = event.target;
-          const submitButton = form.querySelector("button[type='submit']");
-          submitButton.disabled = true;
-          submitButton.querySelector("span").innerText = "يرجى الانتظار، جارٍ حجز الموعد";
-      
-          const formData = new FormData(form);
-          fetch(form.action, {
-            method: "POST",
-            body: new URLSearchParams(formData)
-          })
-          .then(response => response.text())
-          .then(result => {
-            Swal.fire({
-              title: 'تم بنجاح!',
-              text: 'شكراً لك، تم حجز الموعد بنجاح',
-              icon: 'success',
-              confirmButtonText: 'موافق'
-            });
-            form.reset();
-          })
-          .catch(error => {
-            Swal.fire({
-              title: 'حدث خطأ!',
-              text: 'فشل في حجز الموعد: ' + error.message,
-              icon: 'error',
-              confirmButtonText: 'موافق'
-            });
-          })
-          .finally(() => {
-            submitButton.disabled = false;
-            submitButton.querySelector("span").innerText = "احجز موعد الآن";
-          });
-        });
-
-        document.getElementById('booking-form').addEventListener('submit', function() {
-    fbq('track', 'Lead');
-  });
-        
-      </script>
-      
             
       
 
@@ -391,10 +341,6 @@
       </div>
 
     </div>
-    <!-- <figure class="about-banner" data-reveal="right">
-      <img src="./assets/images/about-banner.png" width="554" height="678" loading="lazy" alt="عننا"
-        class="w-100">
-    </figure> -->
   </div>
 </section>
 
@@ -651,42 +597,7 @@
     </div>
   </div>
 </section>
-
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  const showMoreButtons = document.querySelectorAll('.show-more-btn');
-
-  showMoreButtons.forEach(button => {
-    const testimonial = button.previousElementSibling;
-    const originalText = testimonial.textContent.trim();
-    const words = originalText.split(' ');
-
-    if (words.length > 42) {
-      const truncatedText = words.slice(0,42).join(' ') + '...';
-      testimonial.textContent = truncatedText;
-
-      button.style.display = 'block';
-
-      button.addEventListener('click', function() {
-        if (testimonial.textContent === truncatedText) {
-          testimonial.textContent = originalText;
-          button.textContent = 'عرض أقل';
-        } else {
-          testimonial.textContent = truncatedText;
-          button.textContent = 'شاهد المزيد';
-        }
-      });
-    } else {
-      button.style.display = 'none';
-    }
-  });
-});
-</script>
-
-
-
-    </article>
+</article>
   </main>
 
 
@@ -764,18 +675,6 @@ document.addEventListener('DOMContentLoaded', function() {
             </a>
           </li>
   
-          <li>
-            <a href="#" class="social-link">
-              <ion-icon name="logo-linkedin"></ion-icon>
-            </a>
-          </li>
-  
-          <li>
-            <a href="#" class="social-link">
-              <ion-icon name="logo-pinterest"></ion-icon>
-            </a>
-          </li>
-  
         </ul>
 
       </div>
@@ -797,46 +696,6 @@ document.addEventListener('DOMContentLoaded', function() {
         </address>
 
       </div>
-
-      <ul class="footer-list" data-reveal="bottom">
-
-        <li>
-          <p class="headline-sm footer-list-title"></p>
-        </li>
-
-        <li>
-          <a href="#" class="text footer-link"></a>
-        </li>
-
-
-
-        <li>
-          <a href="#" class="text footer-link"></a>
-        </li>
-
-      </ul>
-
-      <ul class="footer-list" data-reveal="bottom">
-
-        <li>
-          <p class="headline-sm footer-list-title"></p>
-        </li>
-
-        <li>
-          <a href="#" class="text footer-link"></a>
-        </li>
-
-        <li>
-          <a href="#" class="text footer-link"></a>
-        </li>
-
-
-
-        <li>
-          <a href="#" class="text footer-link"></a>
-        </li>
-
-      </ul>
 
       <!-- Replace subscription section with map -->
       <div class="footer-map" data-reveal="bottom">
@@ -918,8 +777,6 @@ document.addEventListener('DOMContentLoaded', function() {
 </button>
 
 
-<!-- تأكد من تضمين Font Awesome لأيقونة الهاتف -->
-<script src="https://kit.fontawesome.com/a076d05399.js"></script>
       
 
 
